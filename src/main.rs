@@ -71,18 +71,17 @@ fn main() {
                 stdin().read_line(&mut input).unwrap();
                 field[pointer] = input.chars().next().unwrap() as u8 as i32;
             }
-            Nodes::LoopNode(_) => {}
         }
         i += 1;
     }
-    // println!(
-    //     "{:?}",
-    //     field
-    //         .iter()
-    //         .map(|x| x.to_string())
-    //         .collect::<Vec<String>>()
-    //         .join(" ")
-    // );
+    println!(
+        "{:?}",
+        field
+            .iter()
+            .map(|x| x.to_string())
+            .collect::<Vec<String>>()
+            .join(" ")
+    );
 
     // println!("{:?}", nodes);
 }

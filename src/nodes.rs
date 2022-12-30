@@ -1,5 +1,3 @@
-#![allow(dead_code)]
-
 use std::fmt::Debug;
 use std::{fmt::Error, fmt::Formatter};
 #[derive(Clone)]
@@ -12,7 +10,6 @@ pub enum Nodes {
     RBracketNode,
     DotNode,
     CommaNode,
-    LoopNode(Vec<Nodes>),
 }
 
 impl Debug for Nodes {
@@ -26,13 +23,6 @@ impl Debug for Nodes {
             Nodes::RBracketNode => write!(f, "RBracketNode"),
             Nodes::DotNode => write!(f, "DotNode"),
             Nodes::CommaNode => write!(f, "CommaNode"),
-            Nodes::LoopNode(nodes) => {
-                write!(f, "LoopNode(")?;
-                for node in nodes {
-                    write!(f, "{:?}, ", node)?;
-                }
-                write!(f, ")")
-            }
         }
     }
 }

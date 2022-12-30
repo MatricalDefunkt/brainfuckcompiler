@@ -1,6 +1,3 @@
-#![allow(dead_code)]
-
-//Brainfuck tokens
 pub mod tokenizer {
     use std::str::Chars;
 
