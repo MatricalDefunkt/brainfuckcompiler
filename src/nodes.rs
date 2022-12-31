@@ -10,6 +10,7 @@ pub enum Nodes {
     RBracketNode,
     DotNode,
     CommaNode,
+    HashNode,
 }
 
 impl Debug for Nodes {
@@ -23,6 +24,7 @@ impl Debug for Nodes {
             Nodes::RBracketNode => write!(f, "RBracketNode"),
             Nodes::DotNode => write!(f, "DotNode"),
             Nodes::CommaNode => write!(f, "CommaNode"),
+            Nodes::HashNode => write!(f, "HashNode"),
         }
     }
 }

@@ -11,6 +11,7 @@ pub mod tokenizer {
         RBracket,
         Dot,
         Comma,
+        Hash,
     }
 
     impl Tokens {
@@ -24,10 +25,11 @@ pub mod tokenizer {
                 Tokens::RBracket => "]",
                 Tokens::Dot => ".",
                 Tokens::Comma => ",",
+                Tokens::Hash => "#",
             }
         }
 
-        pub fn to_array() -> [Tokens; 8] {
+        pub fn to_array() -> [Tokens; 9] {
             [
                 Tokens::Plus,
                 Tokens::Minus,
@@ -37,6 +39,7 @@ pub mod tokenizer {
                 Tokens::RBracket,
                 Tokens::Dot,
                 Tokens::Comma,
+                Tokens::Hash,
             ]
         }
         pub fn tokenize(input: Chars<'_>) -> Vec<Tokens> {

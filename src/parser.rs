@@ -25,6 +25,7 @@ impl Parser {
                 Tokens::RBracket => self.nodes.push(Nodes::RBracketNode),
                 Tokens::Dot => self.nodes.push(Nodes::DotNode),
                 Tokens::Comma => self.nodes.push(Nodes::CommaNode),
+                Tokens::Hash => self.nodes.push(Nodes::HashNode),
             }
         }
         return self.nodes.clone();
