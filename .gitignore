@@ -1,2 +1,5 @@
 /target
 /dist
+
+# All brainfuck files
+*.bf
